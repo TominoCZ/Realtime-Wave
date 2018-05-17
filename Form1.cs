@@ -73,7 +73,7 @@ namespace RealtimeWave
 
                                 panel2.Visible = panel2.Enabled = p.X > panel2.Location.X - 5 && p.Y > panel2.Location.Y && p.X < ClientSize.Width && p.Y < ClientSize.Height;
 
-                                Refresh();
+                                Invalidate();
                             }));
                         }
                     }
@@ -150,7 +150,7 @@ namespace RealtimeWave
             return Color.FromArgb(red, green, blue);
         }
 
-        void FixedUpdate()
+        private void FixedUpdate()
         {
             if (ColorFadeSpeedMultiplier > 0)
             {
